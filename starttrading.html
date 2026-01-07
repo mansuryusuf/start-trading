@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Trading Error</title>
+<style>
+    body {
+        background-color: #cfcfcf;
+        font-family: Tahoma, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .dialog {
+        width: 460px;
+        background-color: #f2f2f2;
+        border: 2px solid #1f3b7a;
+        box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .title-bar {
+        background: linear-gradient(to right, #1f3b7a, #3b6db3);
+        color: white;
+        padding: 6px 10px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close {
+        background: #c75050;
+        border: 1px solid #fff;
+        color: white;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        line-height: 16px;
+        font-weight: bold;
+    }
+
+    .content {
+        display: flex;
+        padding: 20px;
+        color: black;
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 48px;
+        margin-right: 15px;
+    }
+
+    .text p {
+        margin: 6px 0;
+    }
+
+    .buttons {
+        padding: 10px 20px 20px;
+        text-align: right;
+    }
+
+    button {
+        width: 90px;
+        padding: 5px;
+        margin-left: 10px;
+        font-size: 13px;
+        border: 1px solid #808080;
+        background: #e0e0e0;
+        cursor: pointer;
+    }
+
+    button:active {
+        background: #c8c8c8;
+    }
+
+    .sticker {
+        text-align: center;
+        font-size: 72px;
+        padding-bottom: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="dialog">
+    <div class="title-bar">
+        <span>Trading Error</span>
+        <span class="close">×</span>
+    </div>
+
+    <div class="content">
+        <div class="icon">❌</div>
+        <div class="text">
+            <p><strong>Selamat datang di Trading</strong></p>
+            <p>Di sini Anda membayar setiap kesalahan<br>
+               dengan dolar, bukan permintaan maaf.</p>
+            <p><strong>Apakah Anda siap memulai?</strong></p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="menyerah()">Menyerah</button>
+        <button onclick="mulai()">Mulai!</button>
+    </div>
+
+    <div class="sticker" id="sticker"></div>
+</div>
+
+<script>
+    function menyerah() {
+        document.getElementById("sticker").innerHTML = "😔💸";
+    }
+
+    function mulai() {
+        document.getElementById("sticker").innerHTML = "🔥😤⚔️";
+    }
+</script>
+
+</body>
+</html>
